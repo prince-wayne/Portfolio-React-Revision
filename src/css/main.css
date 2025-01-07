@@ -1,0 +1,37 @@
+:root {
+    box-sizing: border-box;
+
+    /* Color Shceme */
+
+    /* Basic Styles */
+}
+
+/* Hero section header */
+h1 {} 
+
+/* Section headers */
+h2 {}
+
+/* Subsection headers */
+h3 {}
+
+/* bold text, maybe links, and btns */
+h4 {}
+
+/* likely not to be used. */
+h5 {} 
+
+/* likely not to be used. */
+h6 {} 
+
+/* Do I need to explain this?  */
+p {} 
+
+/* hero sections */
+
+.hero-section {}
+.hero-section .overlay {}
+
+/* btns */
+button {}
+

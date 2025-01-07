@@ -1,0 +1,8 @@
+[
+    {
+        "name" : "Blog Preview Card",
+        "src" : "./src/blog-preview-card-main/index.html",
+        "description" : "We ahall get the description from the githib file since ours are held online away and unusable",
+        "tags" : ["HTML", "CSS"]
+    }
+]
