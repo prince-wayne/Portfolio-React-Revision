@@ -131,3 +131,11 @@ can't move foward in this moment without wifi. We shall move forward at a later 
 **4:11 AM**
 
 ---
+
+### Tuesday, 1/8/2025, 9:30 PM
+
+|Tasks | difficulity
+|-|-|
+**Home Page** | -
+Project display | 2
+Styling | 1
