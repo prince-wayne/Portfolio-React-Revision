@@ -8,9 +8,11 @@ Follow this structure to keep this file clean.
 Date, 
 Week, 
 Day, 
+Starting notes,
 Tasks for today,
-Completed Task,
-Note. 
+Completed Tasks,
+Notes,
+Leaving Notes.  
 
 ## Before we start
 
@@ -139,3 +141,76 @@ can't move foward in this moment without wifi. We shall move forward at a later 
 **Home Page** | -
 Project display | 2
 Styling | 1
+
+**What We Did**
+
+nothing major just fixed the project display and filled the data sheet for projects. also we can't see design changes inside of this because it's through figma. 
+
+changes: [project display, design completion, jsx compondent for display, data]
+
+## Week III
+
+### 1/12/25, Day 1 (Sunday) 
+
+**My excuse** 
+
+We've had a wild week and a workplace injury, when combined with having to walk 40 minutes to the library do to lack of home Wi-Fi it doesn't help. 
+
+#### Starting Notes
+
+We did a decent amount of unnoted work, a habit we need to fix. but it mostly exsited in `"/src/project display/project display.jsx"`. However, one hanging issue is never executed code. Our current computer has limited storage capacity that I've never noticed untill I began using react studies. 
+
+**What I didn't note** 
+
+Hard to say but I believe I nearly finsiged the `Project display` compondent. 
+
+**As I look at code changes** 
+
+We could save time by having a documentation folder and process. Ask a partner about the standard industry process, My current thought is a mix of as i go and at the end, Likely will be a end of week thing. I'm unsure. 
+
+Looks like we hit every item for the `project display` compondent. Including the selection btns (no image) and the dot logic/status. The next step would likely be us going throught the home page and attacking he hardest task remaining, a lot of stuff is just inputting images currently. only code heavy things were this and the contact section. 
+
+
+#### Tasks
+
+Title | Note? 
+|-|-|
+Project display | Mostly done if not already complete
+Home page | likely just images and classes
+input of design file | We spent a decent amount of time outside development and in design last week. 
+
+If i had to guess I'd say we spent 15 hours designing the current file (loaded in today) we only need to design the contact page now.
+
+Development Start: 27 mins into clock. (notes are important for flow hopefully)
+
+
+#### Notes
+
+**8:19 PM** 
+
+We don't have any critical issues, however we are creating a exit tool to exit functions faster(for turnover time not proformance) by quickly checking for values and exiting code block for non essential items. however if the compondent code fails we are thiknking of having a defined range to allow the user to still see secondary information. 
+
+**Exit: 8:22**  
+
+---
+
+**8:54 PM**
+
+we found that it isn't the best way to handle it, we can just use the try and catch whenever we check a value. 
+
+--- 
+
+**9:14 PM** 
+
+We took a quick look at the log file stuuf we've seen recently, We will apply it once we're comfortable with the topic and have studied it well enough for proper uslage. 
+
+---
+
+#### Leaving Note 1`)`
+
+we will start again at home, but here's what we need to do, use conditional rendering to control the icons gird or icons rows. if the thing is a grid then we need to change the placement to exsist outside the rows to pervent needing multi
+
+#### Returning note
+
+Computer died with too little time for me to complete the task at hand, thankfully It died during the note above, we were debating how we would handle the errors and looking at a few logging solutions, idealy log every error that occurs, log maybe ten percent of user performance 
+

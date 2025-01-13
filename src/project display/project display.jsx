@@ -2,56 +2,74 @@
 import { useState, useEffect, useRef } from "react";
 
 async function loadDataFile(path) {
+  // If I used random number I could easily have log infomation every 1/10 runs. 
   try {
     const response = await fetch(path);
-    // console.log(response);
     const data = await response.json();
-    // console.log(data);
     return data;
   } catch (error) {
     console.error("Error loading data: ", error);
     return [];
   }
-  // function from older project
+  // function from older project, nearly no changes. 
 }
 
 export default function ProjectDisplay() {
   const projectData = useRef(null);
-
-  const [Display, setDisplay] = useState({});
   const [selection, setSelction] = useState(0);
-
   const [status, setStatus] = useState(false);
 
   useEffect(() => {
-    loadDataFile("./Data/pokemon.json").then((res) => {
-      pokemonData.current = res;
+    loadDataFile("/public/data/projects.json").then((res) => {
+      projectData.current = res;
       setSelction(0);
       setStatus(true);
     });
   }, []); 
-  
-  function handleLoad() {
-    if (status) {
-      return <div className="card-container">
-        <img src={image.src} alt = {image.alt}/>
 
-        <h4>{Title}</h4>
-        <p>{Description}</p>
+  useEffect(() => {
+    if (selection == 0) {
+      setDotStatus(
+        ["active", "inactive", "inactive", "inactive"]
+      )
+    } else if (selection >= 1 && selection <= length - 2) {
+      setDotStatus(
+        ["inactive", "active", "inactive", "inactive"]
+      )
+    } else if (selection > length - 2 && selection < length - 1) {
+      setDotStatus(
+        ["inactive", "inactive", "active", "inactive"]
+      )
+    } else if (selection == length) {
+      setDotStatus(
+        ["inactive", "inactive", "inactive", "active"]
+      )
+    }
+  }, [selection]);
+
+  function handleLoad() { 
+    if (status) {
+      const {image, title, tags, link, description} = projectData.current[selection];
+      const {project, codebase} = link;
+
+      return <div className="card-container">
+        <img src={image} alt = {description.short}/>
+
+        <h4>{title}</h4>
+        <p>{description.long}</p>
 
         <ul>
-        {Tags.map((ele, index) =`<li key = ${index}> ${ele} </li>`)}
+          {tags.map((ele, index) =`<li key = ${index}> ${ele} </li>`)}
         </ul>
 
-        <a href={link.project}>
-        <button> Veiw Project </button>
+        <a href={project}>
+          <button> Veiw Project </button>
         </a>
 
-        <a href={links.codebase}>
-        <button> View Codebase </button>
+        <a href={codebase}>
+          <button> View Codebase </button>
         </a>
       </div>
-
     } else {
       return <h4 className="wait">Please Wait</h4>;
     }
@@ -74,28 +92,17 @@ export default function ProjectDisplay() {
     }
   }
 
-
-
-  return <div className="projects-sections">
+  return <div className="projects-section">
     <h2>Recent Projects & Learning Highlights</h2>
-    <img src="" alt="" onClick={handleBtnClick("back")}/> {/* left button */}
+    <img src="" alt="last project" onClick={handleBtnClick("back")}/> {/* left button */}
     {handleLoad()}
-    <img src="" alt="" onClick={handleBtnClick("next")}/> {/* right btn */}
+    <img src="" alt="next project" onClick={handleBtnClick("next")}/> {/* right btn */}
     {/* This will require conditional rendering,  */}
     <div className="dot-inditicators">
-        <div className="dot-inditicator"></div>
-        <div className="dot-inditicator"></div>
-        <div className="dot-inditicator"></div>
+        <div className={`dot-inditicator ${dotStatus[0]}`}></div>
+        <div className={`dot-inditicator ${dotStatus[1]}`}></div>
+        <div className={`dot-inditicator ${dotStatus[2]}`}></div>
+        <div className={`dot-inditicator ${dotStatus[3]}`}></div> {/* not in the original design plan, but having the middle remain "lighten" through the entire selection. */}
     </div>
   </div>
 }
-
-
-/* 
-    compondent process,
-    display wait message
-    load projects
-    allow selection via btns LR
-    Display selection with the dot inditicator
-
-*/
