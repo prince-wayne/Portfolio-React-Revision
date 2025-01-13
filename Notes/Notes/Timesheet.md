@@ -212,5 +212,54 @@ we will start again at home, but here's what we need to do, use conditional rend
 
 #### Returning note
 
-Computer died with too little time for me to complete the task at hand, thankfully It died during the note above, we were debating how we would handle the errors and looking at a few logging solutions, idealy log every error that occurs, log maybe ten percent of user performance 
+Computer died with too little time for me to complete the task at hand, thankfully It died during the note above, we were debating how we would handle the errors and looking at a few logging solutions, idealy log every error that occurs, log maybe ten percent of user performance (info) logs for preventive mantance. 
+
+
+**Things we handled** 
+
+we have a start to our error handling, go back and ensure project cards have the same fail safes. 
+project cards are finished outside of error handling. 
+icon group is handled as well, in the future for scalability build the compondent dymanically, .map() / .forEach() 
+home page is mostly done out side of the pop up method, we will soon have access to a better computer if things go well. (library access or laptop purchase)
+
+**things we could handle**
+
+One, we don't have a trackpad for our time spent weekly, something like that would help the workflow and planning, two, we are starting multiple processes at the same time, time management will become increasingly important over the course of this year. 
+
+**Current Focus**
+
+Error handling, fallback data (projects & skills), Home page completion (idealy)
+
+**Dev start (code)**
+
+1:43 AM
+
+---
+
+**1:45 AM** 
+
+We should add docs to our focus.
+
+--- 
+
+**2:03 AM** 
+
+Object.map has never existed, although there's a work around to our favorite method. 
+look at key and values methods then match the indexing to work this one. 
+
+As i look at my book, there's the possible usage of bracket notation, `object["key"]` thought, use within `keys.forEach()` to allow the keys array select it's value out of the object while using a map on the indivual keys `["front-end", "back-end", "tools"]` then, use a map to map the arrays stored. 
+
+problem solving at work. (cocky smile emoji)
+
+**2:14 AM**
+
+---
+
+**3:04 AM**  
+
+We have the grid stuff all complete aside from styling, (conditional rendering, object function, structure, etc)
+
+next step? 
+
+--- 
 
