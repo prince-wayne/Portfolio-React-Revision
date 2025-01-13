@@ -259,7 +259,37 @@ problem solving at work. (cocky smile emoji)
 
 We have the grid stuff all complete aside from styling, (conditional rendering, object function, structure, etc)
 
-next step? 
+next step? project display error handling and general adjustments. 
 
 --- 
 
+**3:36 AM** 
+
+We are debating if we want to use conditional rendering in line or in a styles sheet. we are going to lay our head back and think. time stamp (above) @ 2:14:20 (duration)
+
+our decision is to put the style into main sheet. but, if it gets crowded or there's a need to clean we will remove the css handling and use js. (a complex sheet vs a unnoticable difference in process time) however, I don't have edvidence to proof such a thing. 
+
+breify looked at my book, wanted to see if I could find something unrelated to note. 
+
+Looks like we might not need it for our projects display, the only possible error is the dataloading. 
+or it loading incorrectly, we'll handle incorrect data
+
+**3:50 AM**
+
+---
+
+**4:14 AM**
+
+Better thank prettier for saving that missed error. () => {} not () = {}
+
+---
+
+**5:05 AM**
+
+I'm up, still. we improved the state management on the dots. although, this could have been done with the use of an else statement. more than likely. might not have been a promance gain here. looks cool though right? (crying emoji) 
+
+**Taking a break: 5:12 AM** 
+
+---
+
+**Back from break: ? AM**

@@ -49,18 +49,9 @@ export default function Home() {
           Here are the technologies and tools I use to create functional and
           engaging websites:
         </p>
-        {/* 
-            The compondent below will be [
-                icon, 
-                skills [{skill, level}...]
-            ] 
-            */}
-        <skillGroups />
-        {/*
-          I've debated the value of this, not much to require this. (3 days ago)
-          Actually it would reduce repeated code, so there's some value in it. (8 PM, SUNDAY, WEEK III)
-
-        */}
+       
+        <skillGroups isGrid = {false} />
+  
         <p>
           I bring a versatile skill set to front-end development, combining
           technical expertise with problem-solving and adaptability. Proficient
