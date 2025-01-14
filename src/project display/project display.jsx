@@ -1,5 +1,5 @@
 // we gotta load in the projects, our old portfolio should have the data file.
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, Children } from "react";
 
 async function loadDataFile(path) {
   // If I used random number I could easily have log infomation every 1/10 runs.
@@ -9,7 +9,7 @@ async function loadDataFile(path) {
     return data;
   } catch (error) {
     console.error("Error loading data: ", error);
-    return [];
+    return []; // an empty array isn't acceptable in this moment. but it's how we'll use it as a check
   }
   // function from older project, nearly no changes.
 }
@@ -17,6 +17,7 @@ async function loadDataFile(path) {
 export default function ProjectDisplay() {
   const [status, setStatus] = useState(false);
   const projectData = useRef(null);
+  const [dataInvalid, setDataInvalid] = useState(false);
   const [selection, setSelction] = useState(0);
   const [dots, setDots] = useState([
     "active",
@@ -30,6 +31,9 @@ export default function ProjectDisplay() {
       projectData.current = res;
       setSelction(0);
       setStatus(true);
+      if (Array.isArray(res) && res.length == 0) {
+        setDataInvalid(true);
+      }
     });
   }, []);
 
@@ -64,7 +68,9 @@ export default function ProjectDisplay() {
           <p>{description.long}</p>
 
           <ul>
-            {tags.map((ele, index) => `<li key = ${index}> ${ele} </li>`)}
+            {tags.map((ele, index) => (
+              <li key={index}> {ele} </li>
+            ))}
           </ul>
 
           <a href={project}>
@@ -74,6 +80,17 @@ export default function ProjectDisplay() {
           <a href={codebase}>
             <button> View Codebase </button>
           </a>
+        </div>
+      );
+    }
+    if (dataInvalid && status) {
+      return (
+        <div className="invalid-data">
+          <h3>
+            Sorry there seems to be an issue with our data processing, try
+            refreshing your page please.
+          </h3>
+          <p> If this continues please let us know and we'll fix it soon.</p>
         </div>
       );
     } else {
@@ -99,8 +116,8 @@ export default function ProjectDisplay() {
   }
 
   return (
-    <div className="projects-section">
-      <h2>Recent Projects & Learning Highlights</h2>
+    <section className="projects-section">
+      {Children}
       <img src="" alt="last project" onClick={handleBtnClick("back")} />
       {/* left button */}
       {handleLoad()}
@@ -113,6 +130,6 @@ export default function ProjectDisplay() {
         <div className={`dot-inditicator ${dots[2]}`}></div>
         <div className={`dot-inditicator ${dots[3]}`}></div>
       </div>
-    </div>
+    </section>
   );
 }

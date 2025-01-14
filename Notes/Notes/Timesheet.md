@@ -20,7 +20,7 @@ I would like to address that due to both home and weather conditions I was not a
 
 ## Week II
 
-### Monday, 12/6/2025 (Happy birthday)
+### Monday, 1/6/2025 (Happy birthday)
 
 **Start**: 12:00 AM,
 
@@ -288,8 +288,60 @@ Better thank prettier for saving that missed error. () => {} not () = {}
 
 I'm up, still. we improved the state management on the dots. although, this could have been done with the use of an else statement. more than likely. might not have been a promance gain here. looks cool though right? (crying emoji) 
 
-**Taking a break: 5:12 AM** 
+---
+
+
+### Day 2, 1/13/2025, Monday
+
+Where we left off:
+
+We were working on both 
+Coming back after sleep
+
+### Day 3, 1/14/25, Tuesday
+
+Yesterday did not go to plan, although it wasn't wasted, we worked on securing a job/intership instead and looks like we might've got one. However, once we got back home the whole day went away. 
+
+**Before we start**
+
+our **home page** is our current focus, imgs don't matter yet but we should get them soon so they're here, WE ARE STILL DEVELOPING BLIND, it would be nice to get to the library but the car we were supposed to get was sold, so we're looking for another, also **UPDATE** we will likely be starting our blog here as well, considering that this is a portfoilo though we might want to review and research, We can match the blog post to our current site but its not likely, and it will likely open as a new page instead of a subpage. 
+
+|**Tasks** | Note |
+|-| -|
+Home Page | -
+Projects view | review
+Icon group | review
+
+continue top to bottom for home page and ensure we able to move onto the about page
+
+
+**Start 5:37 AM**
+
+--- 
+
+**6:02 AM** 
+
+only possible issue with projects is an empty string. we made a fallback error message to handle that. 
+next the icon group.
+
+**Icon Gourp**
+
+Has no apparent issues, there's no reason to create an error or fallback considerng it's not using js to load anything in or deal with any values. Error logs here are for the development process if anything.
+
+**Project display p2**
+
+I chose to change it to include children, both for the structure of the pages and or the matter of headers chaning and some needing sub text.
 
 ---
 
-**Back from break: ? AM**
+**6:18 AM**
+
+We are onto the final part of the home page, `contactPopup.jsx`, this will likely be the challenging part (it's our very first popup ever used) but it's a very good oppertunity to learn
+
+also to add we are building this site with a few tools, 
+
+Sass, and then this prerender api that was recently built into web browers. (hasn't been applied to all browers) I think it was chrome and safari that currently supports it. 
+
+**Issue** 
+
+We don't have the design file containing the popup, though we will later, so our solution will be us building the other two pages we can see instead. 

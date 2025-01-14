@@ -4,9 +4,9 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
+import openContactPopUp from "./src/popups/contact.jsx"
+
 export default function Home() {
-
-
   return (
     <>
       {/* returns a fragment */}
@@ -49,9 +49,9 @@ export default function Home() {
           Here are the technologies and tools I use to create functional and
           engaging websites:
         </p>
-       
-        <skillGroups isGrid = {false} />
-  
+
+        <skillGroups isGrid={false} />
+
         <p>
           I bring a versatile skill set to front-end development, combining
           technical expertise with problem-solving and adaptability. Proficient
@@ -63,8 +63,8 @@ export default function Home() {
           skills that enable me to adapt to diverse challenges.
         </p>
       </section>
-      <section id="recent-projects-section">
-        {/* 
+
+      {/* 
 					this is going to be the simple hard thing on this page  
 					we want to create a compondent that will fade out the current section as the card fades out, I'm think of a card fall off like a deck of cards 
 					----
@@ -82,9 +82,11 @@ export default function Home() {
 					
 					-45 degress or almost flat unsure. fades out, revealing card behind it. 
 				*/}
+      {/* this is a section compondent */}
+      <projectsDisplay>
         <h2>Recent Projects & Learning Highlights</h2>
-        <projectsDisplay />
-      </section>
+      </projectsDisplay>
+
       <section id="contact-section">
         <h2>Let's Work Together</h2>
         <img src="" alt="" />
