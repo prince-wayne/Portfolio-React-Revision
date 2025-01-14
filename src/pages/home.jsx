@@ -1,17 +1,18 @@
-// this would be the home page, i did forget the template app.jsx file structure but it's just a compondent to be loaded into index.js
 import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
-import openContactPopUp from "./src/popups/contact.jsx"
+import ProjectDisplay from "./src/components/project display/project display.jsx";
+import SocialIcons from "./src/components/icon groups/Social Icons.jsx";
+import Overlay from '../components/popups/Overlay';
+import ContactForm from '../components/popups/contact';
 
 export default function Home() {
   return (
     <>
       {/* returns a fragment */}
-
-      <section id="home-hero-section" className="hero-section">
+      <section id="home-hero-section" className="hero-section" data-testid="home-hero-section">
         <img />{" "}
         {/* background image could just use the css property or could make the overlay absolute. */}
         <div id="hero-section-overlay" className="overlay">
@@ -32,7 +33,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="introduction">
+      <section id="introduction" data-testid="introduction">
         <img src="" alt="" />
         <h2>Hi, I'm Tyshawn, a Passionate Front-End developer</h2>
         <p>
@@ -43,7 +44,7 @@ export default function Home() {
           talent, I’m here to help build your vision.
         </p>
       </section>
-      <section id="Skills">
+      <section id="Skills" data-testid="Skills">
         <h2>Skills and Expertise</h2>
         <p>
           Here are the technologies and tools I use to create functional and
@@ -64,30 +65,11 @@ export default function Home() {
         </p>
       </section>
 
-      {/* 
-					this is going to be the simple hard thing on this page  
-					we want to create a compondent that will fade out the current section as the card fades out, I'm think of a card fall off like a deck of cards 
-					----
-					|--|
-					|--|
-					----
-
-					   -
-						-    -
-					 -         -
-					-              -
-					    -         -
-							    -    -   
-									   - 
-					
-					-45 degress or almost flat unsure. fades out, revealing card behind it. 
-				*/}
-      {/* this is a section compondent */}
-      <projectsDisplay>
+      <ProjectDisplay data-testid="project-display">
         <h2>Recent Projects & Learning Highlights</h2>
-      </projectsDisplay>
+      </ProjectDisplay>
 
-      <section id="contact-section">
+      <section id="contact-section" data-testid="contact-section">
         <h2>Let's Work Together</h2>
         <img src="" alt="" />
         <p>
@@ -98,13 +80,16 @@ export default function Home() {
         <div
           id="contact-section-social-media-icon-box"
           className="inline-icons"
+          data-testid="social-icons"
         >
-          {/* we could really make this section a compondent to help with the other ones above */}
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
+          <SocialIcons/>
         </div>
-        <button onclick={openContactPopUp()}>Send a Message</button>
+        <div id="contact-btn">
+          {/* contact overlay */}
+          <Overlay>
+            <ContactForm />
+          </Overlay>
+        </div>
       </section>
     </>
   );

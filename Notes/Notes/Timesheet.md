@@ -345,3 +345,54 @@ Sass, and then this prerender api that was recently built into web browers. (has
 **Issue** 
 
 We don't have the design file containing the popup, though we will later, so our solution will be us building the other two pages we can see instead. 
+
+---
+
+**6:48 AM**
+
+within icon group we made a small change to allow clicking on icon, 
+
+`
+{...link ? 'href = ${link}' : null}
+`
+
+unsure of how this would work so it's something i would have to look at myself later today hopefully but the idea is that the operator checks for a link and then adds it to the icon or does nothing. 
+
+**Traveling to library : 6:54 AM** 
+
+we'll be right back, things are at a stopping point, when we get back we will be handling the about page. 
+
+**We're back : 8:43 AM** 
+
+added a few of the imports then realised I could have chatGPT or another ai to check for failing code. also I might as well write the test whle I'm here. Also I got distracted for a short moment
+
+I was wrong they can't review it for me, but if there's anyone reading I would greatly appricate you guys (I mispell words some times, if that ever doesn't say guys it wasn't intentional)
+
+**Moving onto Test writing**
+
+**9:00 AM**
+
+Our computer crashed and westarted a while ago with the test building but It's fine. 
+
+| **current tasks**| note| 
+|-|-|
+Build Tests for Home compondents | new topic
+Build popup overlay for contact button | new topic
+
+**11:00 AM**
+
+Slight struggle to focus. slightly warm and tired. but test for home (not much needed beside ensuring popup functions and compendents load to page), project display, test that the project handles load and then click operations
+
+onto the icon tests, we don't need it to be honest, the images and error handling would tell us if we forgot images or props in the compondent
+
+**12:00 AM**
+
+We might reserve the `---` for the day to day to day instead of time to time, it's a little messy. 
+
+but we have built test for the home and for the project thing. we built the overlay system mostly but we need to adjust it to accept children so i can interchange the compondent (links and contact form);
+
+we will aso need to build the test for this as well. and the handler for once they press that submit button. 
+
+**12:30 PM** 
+
+There's a high risk with our contact overlay, we struggle with that useContext topic in our past and we have no way to test them here

@@ -118,17 +118,17 @@ export default function ProjectDisplay() {
   return (
     <section className="projects-section">
       {Children}
-      <img src="" alt="last project" onClick={handleBtnClick("back")} />
+      <img data-testid="Back-btn"  src="" alt="last project" onClick={handleBtnClick("back")} />
       {/* left button */}
       {handleLoad()}
-      <img src="" alt="next project" onClick={handleBtnClick("next")} />
+      <img data-testid="Next-btn" src="" alt="next project" onClick={handleBtnClick("next")} />
       {/* right btn */}
       <div className="dot-inditicators">
         {/* stlyed by class conditional */}
-        <div className={`dot-inditicator ${dots[0]}`}></div>
-        <div className={`dot-inditicator ${dots[1]}`}></div>
-        <div className={`dot-inditicator ${dots[2]}`}></div>
-        <div className={`dot-inditicator ${dots[3]}`}></div>
+        <div data-testid="dot dot-0" className={`dot dot-inditicator ${dots[0]}`}></div>
+        <div data-testid="dot dot-1" className={`dot dot-inditicator ${dots[1]}`}></div>
+        <div data-testid="fot dot-2" className={`dot-inditicator ${dots[2]}`}></div>
+        <div data-testid="dot dot-3" className={`dot-inditicator ${dots[3]}`}></div>
       </div>
     </section>
   );

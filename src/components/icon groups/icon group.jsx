@@ -8,7 +8,7 @@ export default function IconGroup(props) {
   const { icon, skills } = props;
   
   // check icon
-  if (!icon) {
+  if (!icon && isGrid) { // there's no icon if the grid element is present, also some of the icon groups are different from the skills 
     console.error("Icon, not in given props or addressed incorrectly");
     throw new Error(
       "icon not defined within given props, or addressed incorrectly"
@@ -20,6 +20,9 @@ export default function IconGroup(props) {
     throw new Error("skills prop is missing, not an array, or empty");
   }
 
+  if (!link) {
+    // this isn't a error check, just something to allow conditional render
+  }
   return (
     <>
       {/* 
@@ -27,7 +30,10 @@ export default function IconGroup(props) {
         solution a) raise children, no black jokes please. 
         solution b) use parent to wrap all the icons into a single compondent. 
       */}
-      {!isGrid && <img src={icon} alt="" />}
+
+
+      {!isGrid && <img src={icon}  /* the link is something  */alt="" />}
+
       <div
         className={
           "skill-icons-container" + isGrid
@@ -35,8 +41,16 @@ export default function IconGroup(props) {
             : "section-rows inline-icons"
         }
       >
+
+        {/* note that our input would be an array or an object,  */}
+      !link ? 
         {skills.map((ele, index) => (
-          <img className="skill-icon " src={ele} key={index} />
+          <img className="skill-icon " src={ele} key={index}/>
+        ))} :
+        {skills.map((ele, index) => (
+          <a href={ele.link} key={index}>
+            <img className="skill-icon " src={ele.pic} />
+          </a>
         ))}
       </div>
     </>
