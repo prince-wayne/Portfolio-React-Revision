@@ -24,7 +24,7 @@ const ContactForm = ({ onClose }) => {
         <input type="email" name="email" value={formData.email} onChange={handleChange} data-testid="email-input" />
         <label>Message</label>
         <textarea name="message" value={formData.message} onChange={handleChange} data-testid="message-input"></textarea>
-        <button type="submit" data-testid="submit-btn">Submit</button>
+        <button type="submit" data-testid="submit-btn">Send</button>
         <button type="button" onClick={onClose} data-testid="close-btn">Close</button>
       </form>
     </div>

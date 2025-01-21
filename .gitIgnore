@@ -1,4 +1,32 @@
+# Node modules directory
 node_modules/
+
+# Build output directory
 build/
+
+# Environment variables file
 .env
-"./Notes/Plans"
+
+# macOS specific files
+.DS_Store
+
+# Log files
+*.log
+
+# IDE/editor specific directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Test coverage output
+coverage/
+
+# Test files
+*.test.js
+*.test.jsx
+*.test.ts
+*.test.tsx
+
+# Notes directory
+./Notes/

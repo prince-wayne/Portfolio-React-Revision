@@ -396,3 +396,57 @@ we will aso need to build the test for this as well. and the handler for once th
 **12:30 PM** 
 
 There's a high risk with our contact overlay, we struggle with that useContext topic in our past and we have no way to test them here
+
+
+**1:00 PM** 
+
+I'm taking a break, 
+move onto 
+
+---
+
+### Day 4, Thurday 1/16/2025
+
+**Issue** We didn't structure this correctly and it looks like we either didn't count the week as a week or something of that nature, we might've considered this to be week 3 because of the situlation but to track things, like time, effectively, this was week 4. 
+
+#### Tasks
+
+| **Task** | Note | 
+|-| -|
+About Page | build off the design file.
+review home page | ensure everything is complete. 
+
+start taking notes on what was done. It would reduce the time spent before notes of the next sesson.
+
+## Week VI 
+
+**Summary**
+
+We are not having the best luck, very unfortinit turn of events. Our computer is starting to crash mid flow of work. Struggles from: being sick, no phone data, no home WI-FI; sounds a lot less than it's active affect, but, this week we will remain at the library if able. 
+
+**Target hours this week** | Role | Value
+|-- | - | - | 
+10 | Develop | $300
+5 | Design | $100
+
+We have a job outside of this but it's okay we only want to do as much as we can. avoid burnout. 
+
+| Day | Role | Hours | Note |
+| - | - | - | - | 
+Sunday | - | - | Sick | 
+Monday | Develop | 4 hours | today, working through the night, our focus is changing the `projects display` to accept different sort
+Tuesday | Design | 2 hours | contact page 
+Wednesday | Design | 2 hours | blog pages addition / call to
+Thurday | Design | 1 hour | Touch up 
+Thurday | Develop | 3 hours | about page 
+Friday | Develop | 3 hours | about page sub compondents, anything else we can fit into this day
+
+---
+
+### Day 1, Monday
+
+**Summary** 
+
+Today we will be working on the projects display, we need them to accept a sort for when we display personal, business, paid work, and study projects. 
+
+
