@@ -14,7 +14,7 @@ async function loadDataFile(path) {
   // function from older project, nearly no changes.
 }
 
-export default function ProjectDisplay() {
+export default function ProjectDisplay(props) {
   const [status, setStatus] = useState(false);
   const projectData = useRef(null);
   const [dataInvalid, setDataInvalid] = useState(false);
@@ -55,7 +55,15 @@ export default function ProjectDisplay() {
   }, [selection]);
 
   function handleLoad() {
+    const {group} = props;
     if (status) {
+      if (group) {
+        projectData.current.filter((project) => project == group);
+      } else {
+        // line below should handle removing any data used for test, might not be the best practice, noting now
+        projectData.current.filter((project) => project.group !== "test-data");
+      }
+
       const { image, title, tags, link, description } =
         projectData.current[selection];
       const { project, codebase } = link;

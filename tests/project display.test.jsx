@@ -1,7 +1,10 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import ProjectDisplay from "../src/components/project display/project display.jsx"; // Adjust the import path as needed
-import projects from '../src/data/projects.json'; // Adjust the import path as needed
+import ProjectDisplay from "../src/components/project display/project display.jsx";
+import projects from '../src/data/projects.json'; 
+
+const projectsStudyGroup = projects.concat().filter((ele) => ele.trim == "study");
+
 test("renders the first project initially", () => {
   render(<ProjectDisplay />);
   expect(screen.getByText(projects[0].title)).toBeInTheDocument();
@@ -9,7 +12,7 @@ test("renders the first project initially", () => {
 });
 
 test("updates project data when buttons are clicked", () => {
-  render(<ProjectDisplay />);
+  render(<ProjectDisplay />); // with no group it should still operate correctly
   const nextButton = screen.getByTestId("Next-btn");
   const prevButton = screen.getByTestId("Previous-btn");
 
@@ -75,3 +78,10 @@ test("dots show the correct active status", () => {
     expect(screen.getByTestId("dot-2")).not.toHaveClass("active");
     expect(screen.getByTestId("dot-3")).toHaveClass("active");
 });
+
+// we need to test that we sort the projects by group with props
+
+test("projects are filtered by group", () => {
+  render(<ProjectDisplay group = "study"/>);
+  // I forgot the method used to find values within a compondent
+})

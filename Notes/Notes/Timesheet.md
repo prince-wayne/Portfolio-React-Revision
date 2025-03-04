@@ -422,7 +422,11 @@ start taking notes on what was done. It would reduce the time spent before notes
 
 **Summary**
 
-We are not having the best luck, very unfortinit turn of events. Our computer is starting to crash mid flow of work. Struggles from: being sick, no phone data, no home WI-FI; sounds a lot less than it's active affect, but, this week we will remain at the library if able. 
+We are not having the best luck, very unfortinit turn of events. Our computer is starting to crash mid flow of work. Struggles from: being sick, no phone data, no home WI-FI; sounds a lot less than it's active affect, but, this week we will remain at the library if able.
+
+**Reminder** 
+
+Our design file is from a time before we decided to include our blog page, don't do the about page until you've redesigned it. 
 
 **Target hours this week** | Role | Value
 |-- | - | - | 
@@ -448,5 +452,68 @@ Friday | Develop | 3 hours | about page sub compondents, anything else we can fi
 **Summary** 
 
 Today we will be working on the projects display, we need them to accept a sort for when we display personal, business, paid work, and study projects. 
+
+**10:42 PM** 
+
+I think using the filter method on the returned data would be best, also this data is something that would be used across the site could be used in our use context stuff we barely understand. 
+
+never a bad time for practice (insert crying emojis here)
+
+**11:10 PM** 
+
+I ate something and refered to the book to breify see all options for this, remeber that I'm not online to use mdn. it looks like fliter should work. however it edits the array in place, might not be a best practice but we don't need the rest of the array if it works how expected, `WE WILL NEED TO WRITE A TEST FOR THIS` 
+
+Writing the test, I think we will need to write the `projects display` within our test file to be filtered by group before we start testing, or have a seperate test within the same file that would handle the filtered version and the unfiltered version. 
+
+our checkGroup has worked indirectly to save us from something that would've caused us to redo the entire test file. 
+
+I think the method i need out the testing library is the describe, with the ability to target values within Compondents
+
+**Best Practice Issue** 
+`"/src/components/project display/project display.jsx"` <br>
+`line: 64` <br>
+We might not have used the best solution for this, we should as a peer or copilot if this is a good solution
+
+**11:40 PM** 
+
+Ironic day, that youtube video about the sinlge line edits is the best way to explain what was done here, idealy we should move onto the next task and return to the `test file`. 
+
+
+**12:00 AM** 
+
+ensure we handled the naming conventions correctly, I belive we used `hero-section-overlay` and `...-overlay-content` which contained a header and a p element
+
+---
+
+### Week V, Saturday 
+ 
+#### Critical Issue
+
+I literally can't open VScode to begin tonight, possible that the WI-FI is the cause. But at least we can work on design instead until this is figured out. An unlucky lucky guy, We got those two women we were asking for, but now our phone's charger is farkin broken... How am I supposed to continue this one ...
+
+### Week VI, 
+
+#### Sunday 1/26/25
+
+We are going to power through designing since we can't develop. Overtime we will be handle to handle multiple workflows and adjustments but right now we have many limiters affecting us like our WI-FI and computer regularly crashing during development. 
+
+Still might be slow but our start time for physical design is 7:35 PM and we opened the task at 7:00 PM. 
+
+| Tasks | |
+| -| -|
+| Add blog sections across the website |  <input type="checkbox" >|
+| design Contact Page  |  <input type="checkbox" >|
+| adjust `project display` to work for blog post  |  <input type="checkbox" >|
+
+**Before we Start** 
+
+We are adding to the original plan, chaning the name of project display to multi display would make it better, but making something that would  accept a data path and sort could improve it. 
+
+**Start of design 7:45 PM ** 
+
+
+
+
+
 
 
